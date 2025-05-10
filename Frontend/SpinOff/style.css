@@ -1,0 +1,410 @@
+/* Háttér és alapszintű beállítások */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'orbitron', sans-serif;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Bal felső sarokban a Soullink OS felirat */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 100;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-family: 'Exo 2', sans-serif;
+    color: #33FFFF !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.title:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.btn-text {
+    font-family: 'Exo 2', sans-serif !important;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #0A0A0A;
+}
+
+/* Pulzáló animáció */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 8px #33FFFF, 0 0 16px #33FFFF, 0 0 24px #33FFFF;
+    }
+    100% {
+        transform: scale(1.05);
+        text-shadow: 0 0 16px #33FFFF, 0 0 24px #33FFFF, 0 0 32px #33FFFF;
+    }
+}
+
+/* Gombok pozicionálása és stílusa */
+.button-container.horizontal {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    gap: 370px;
+    justify-content: center;
+    width: 100%;
+}
+/* Modal beállítások */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Több sötétítés, hogy ne látszódjon át */
+}
+#modal-blue {
+    background-color: rgba(0, 0, 0, 0.95); /* Átlátszóság csökkentése */
+    z-index: 1000; /* Biztos, ami biztos */
+}
+@keyframes smoothFadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 80%;
+    animation: smoothFadeIn 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.modal-content img {
+    max-width: 50%; /* Növeltük a max szélességet */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00FFFF;
+}
+
+.modal-content button {
+    margin-top: 50px;
+}
+
+/* Gombok stílusa */
+.btn {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-shadow: 0 0 8px #fff;
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+}
+/* Kék Pirula - Valóság Kapuja */
+#modal-blue .modal-content {
+    background-color: rgba(26, 26, 255, 0.2);
+    border: 2px solid #1a1aff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#modal-blue img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #1a1aff;
+}
+
+/* Neon effektek */
+.neon-blue {
+    background-color: #1a1aff;
+    color: #ffffff;
+    box-shadow: 0 0 12px #3333ff;
+}
+
+.neon-pink {
+    background-color: #ff1a1a;
+    color: #ffffff;
+    box-shadow: 0 0 12px #ff3333;
+}
+
+.neon-red {
+    background-color: #00b0cf;
+    color: #ffffff;
+    box-shadow: 0 0 12px #00ffff;
+}
+/* Pirula formázás */
+.pill-button {
+    border-radius: 50px;
+    width: 350px;
+}
+
+/* Hover effekt - Pulzálás */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #FFFFFF;
+}
+/* Pulzáló animáció */
+.pulsing {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 12px #3333ff;
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 24px #6666ff;
+    }
+}
+
+/* Modal gomb felirat fekete */
+.modal-content button span {
+    color: black !important;
+}
+
+/* Lake View stílusok */
+.lake-view {
+    background-image: url('./img/easter_egg_lake.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    text-align: center;
+    color: #33FFFF;
+}
+
+.portal-title {
+    font-size: 3rem;
+    margin-top: 100px;
+    text-shadow: 0 0 8px #33FFFF, 0 0 16px #33FFFF;
+}
+
+.neon-red {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff6666;
+}
+
+.lake-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.lake-text button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #ff1a1a;
+    color: white;
+    box-shadow: 0 0 12px #ff3333;
+}
+
+/* Mátrix stílusok */
+.matrix-view {
+    display: none; /* Kezdetben rejtve */
+    position: fixed;
+    z-index: 300;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slowFadeIn 2s ease-in-out forwards;
+}
+
+@keyframes slowFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.matrix-view img {
+    max-width: 30%; /* Kisebb méret, hogy ne legyen túl nagy */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00FF00;
+    animation: slowFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes slowFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Vissza a nyitóoldalra gomb stílusai */
+#matrix-view button {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #00ff00;
+    color: #003300;
+    box-shadow: 0 0 12px #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    opacity: 0;
+    animation: buttonFadeIn 1s ease-in-out forwards; /* <-- Eltávolítva a 1s késleltetés */
+}
+
+/* Animáció a megjelenéshez */
+@keyframes buttonFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#matrix-view button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px #FFFFFF;
+}
+@keyframes slowButtonFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#modal-red button {
+    opacity: 0;
+    animation: slowButtonFadeIn 1s ease-in-out forwards ;
+}
+
+#modal-red img {
+    opacity: 0;
+    animation: slowAppear 1s ease-in-out forwards  !important;
+    transition: none !important;
+}
+
+@keyframes slowButtonFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slowAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.intro-text {
+    font-size: 1.5rem;
+    font-family: 'Exo 2', sans-serif;
+    color: #33FFFF;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 8px #33FFFF, 0 0 16px #33FFFF;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.start-position {
+    top: 100px !important; /* Ez az eredeti hely */
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
+}
+.intro-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-family: 'Exo 2', sans-serif;
+    color: #33FFFF;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 8px #33FFFF, 0 0 16px #33FFFF;
+    animation: fadeIn 2s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+    .intro-text {
+        top: 55%;
+        max-width: 90%;
+    }
+}

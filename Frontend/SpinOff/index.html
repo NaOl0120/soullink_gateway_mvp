@@ -1,0 +1,62 @@
+<!-- Soullink SpinOff - Frontend és MVP -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Soullink Gateway</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Soullink Gateway</h1>
+    </div>
+    <div class="button-container horizontal">
+        <button class="btn neon-blue pill-button pulsing" onclick="navigate('blue')">
+            <span class="btn-text">Maradok a hétköznapoknál</span>
+        </button>
+        
+
+        <button class="btn neon-pink pill-button pulsing" onclick="navigate('red')">
+            <span class="btn-text">Mutass egy új világot!</span>
+        </button>
+    </div>
+
+    <!-- Modal struktúra - Kék Pirula (Valóság Kapuja) -->
+    <div id="modal-blue" class="modal">
+        <div class="modal-content">
+            <img src="./img/hetkoznapi.jpg" alt="Hétköznapi Valóság">
+            <button class="btn neon-blue pill-button pulsing" onclick="closeBlueModal()">
+                <span class="btn-text">Vissza a Soullink Gateway-hez</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal struktúra - Piros Pirula (Nova Portál) -->
+    <div id="modal-red" class="modal">
+        <div class="modal-content">
+            <img src="./img/nova_portal.jpg" alt="Nova Visszaszámlálás">
+            <button class="btn neon-red pill-button pulsing" onclick="exploreFurther()">
+                <span class="btn-text" style="color: black;">Készen állok – Indulás!</span>
+            </button>
+        </div>
+    </div>
+    <!-- Lake View (Nova Portál következő lépése) -->
+    <div id="lake-view" class="lake-view">
+        <button onclick="exploreFurther()">Felfedezés</button>
+    </div>
+    
+    <!-- Matrix View - Zárókép -->
+    <div id="matrix-view" class="matrix-view">
+        <img src="./img/soullink_os.png" alt="Soullink Gateway - Hamarosan...">
+        <button onclick="goBackToMain()" class="btn neon-blue pill-button">Vissza a nyitóoldalra</button>
+    </div> 
+    <div class="intro-text">
+        Lépj be a jövő digitális kapuján! A Soullink Gateway nem csupán egy rendszer – ez a te személyes mesterséges intelligenciád. Válassz: maradsz a hétköznapok világában, vagy felfedezel egy új univerzumot?
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
